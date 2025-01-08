@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FestFinder" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Circular">
+        <item name="cornerSize">15sp</item>
+    </style>
+
+    <style name="RoundedSquare" >
+        <item name="cornerSize">15sp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="CornerCut">
+        <item name="cornerSize">15dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="DiamondCut">
+        <item name="cornerSize">75dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="SpecificCornerCut">
+        <item name="cornerSizeTopRight">75dp</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+    </style>
+
+    <style name="SpecificCornerRounded">
+        <item name="cornerSizeTopRight">75dp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
+
+    <style name="Theme.FestFinder" parent="Base.Theme.FestFinder" />
+
+    <style name="Theme.FestFinder.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FestFinder.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FestFinder.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

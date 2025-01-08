@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.festfinder.User.ui.HomePageUserFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/homepageuser" >
+        <action
+            android:id="@+id/action_nav_home_to_eventListFragment"
+            app:destination="@id/eventListFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_workshopListFragment"
+            app:destination="@id/workshopListFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.festfinder.User.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.festfinder.User.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.festfinder.User.MyProfileFragment"
+        android:label="MyProfileFragment"
+        tools:layout="@layout/my_profile">
+        <action
+            android:id="@+id/action_nav_profile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_registered"
+        android:name="com.example.festfinder.User.MyRegistrationFragment"
+        android:label="MyRegistrationFragment"
+        tools:layout="@layout/my_registration"/>
+    <fragment
+        android:id="@+id/nav_certificate"
+        android:name="com.example.festfinder.User.MyCertificateFragment"
+        android:label="MyCertificateFragment"
+        tools:layout="@layout/my_certificate" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.festfinder.User.UserTypeFragment"
+        android:label="UserTypeFragment"
+        tools:layout="@layout/user_type" />
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.festfinder.User.EventFragment"
+        android:label="EventListFragment"
+        tools:layout="@layout/event_list">
+        <action
+            android:id="@+id/action_eventListFragment_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_eventListFragment_to_event_detail"
+            app:destination="@id/event_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/event_detail"
+        android:name="com.example.festfinder.User.EventDetailFragment"
+        android:label="EventDetailFragment"
+        tools:layout="@layout/event_detail">
+        <action
+            android:id="@+id/action_event_detail_to_eventRegistrationFragment4"
+            app:destination="@id/eventRegistrationFragment" />
+        <action
+            android:id="@+id/action_event_detail_to_filterFragment3"
+            app:destination="@id/filterFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventRegistrationFragment"
+        android:name="com.example.festfinder.User.EventRegistrationFragment"
+        android:label="EventRegistrationFragment"
+        tools:layout="@layout/event_registration">
+        <action
+            android:id="@+id/action_eventRegistrationFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment3"
+        android:name="com.example.festfinder.User.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/filter"/>
+    <activity
+        android:id="@+id/paymentFragment"
+        android:name="com.example.festfinder.User.PaymentFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/payment">
+    </activity>
+    <fragment
+        android:id="@+id/successfullFragment"
+        android:name="com.example.festfinder.User.SuccessfullFragment"
+        android:label="SuccessfullFragment"
+        tools:layout="@layout/successfull">
+        <action
+            android:id="@+id/action_successfullFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/workshopListFragment"
+        android:name="com.example.festfinder.User.WorkshopListFragment"
+        android:label="WorkshopListFragment"
+        tools:layout="@layout/workshop_list"/>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.festfinder.User.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+</navigation>

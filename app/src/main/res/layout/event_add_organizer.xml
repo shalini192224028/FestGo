@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#1C1C1C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FestGo"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+        <EditText
+            android:id="@+id/eventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Event Name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Description"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Organiser Name"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/organizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Organizer Name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Date"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Time"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Location"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Type"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <Spinner
+            android:id="@+id/eventTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:minHeight="48dp"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration Fee"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/registrationFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Registration Fee"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="number" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textEmailAddress" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDBDBD"
+            android:background="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="phone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Upload Event Poster Section -->
+            <LinearLayout
+                android:id="@+id/postLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Upload Event Poster"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical" />
+
+                <ImageView
+                    android:id="@+id/imgEventPoster"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_download"
+                    android:contentDescription="Download Icon"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Upload Permission Proof Section -->
+            <LinearLayout
+                android:id="@+id/proofLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit Permission Certificate"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical" />
+
+                <ImageView
+                    android:id="@+id/imgProof"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_download"
+                    android:contentDescription="Download Icon"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/requestButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#424242"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+</ScrollView>

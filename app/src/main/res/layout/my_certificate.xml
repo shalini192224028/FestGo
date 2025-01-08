@@ -1,0 +1,84 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#121212">
+
+    <!-- ScrollView for scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Workshop Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#474747">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/workshop_certificate_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_certificate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/workshop_certificate_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Python Basic Workshop"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/workshop_certificate_image"
+                        app:layout_constraintTop_toTopOf="@id/workshop_certificate_image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="16dp" />
+
+                    <TextView
+                        android:id="@+id/workshop_certificate_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date Earned: 13/4/2024"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/workshop_certificate_image"
+                        app:layout_constraintTop_toBottomOf="@id/workshop_certificate_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="16dp" />
+
+                    <Button
+                        android:id="@+id/workshop_view_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View more"
+                        android:backgroundTint="#474747"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/workshop_certificate_image"
+                        app:layout_constraintTop_toBottomOf="@id/workshop_certificate_date"
+                        android:layout_marginStart="16dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Other Cards are similar -->
+            <!-- Repeat the same structure for Webinar and Seminar Cards -->
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1E1E1E">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Menu Icon -->
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_menu"
+            app:tint="#FFFFFF" />
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FestGo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <!-- Main Image Banner -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_explore"
+                app:cardBackgroundColor="#1E1E1E"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/explore_image"
+                    android:layout_width="match_parent"
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_explore"/>
+                <TextView
+                    android:id="@+id/explore_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Join US!\nUpcoming Events"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="start|bottom|center"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Search Bar -->
+
+            <!-- Horizontal Scroll for Events and Workshops -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Search Input -->
+                <EditText
+                    android:id="@+id/search_input"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_search_input"
+                    android:hint="Search"
+                    android:padding="14dp"
+                    android:inputType="text" />
+
+                <!-- Search Button -->
+                <Button
+                    android:id="@+id/search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#444444"
+                    android:text="Search"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Event Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/eventCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/event_image"
+                            android:layout_width="wrap_content"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:src="@drawable/img_event"/>
+                        <TextView
+                            android:id="@+id/event_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Event"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Workshop Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/workshopCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/workshop_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_workshop"/>
+                        <TextView
+                            android:id="@+id/workshop_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Workshop"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Seminar Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/seminarCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/seminar_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_seminar"/>
+                        <TextView
+                            android:id="@+id/seminar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seminar"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Webinar Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/webinarCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/webinar_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_webinar"/>
+                        <TextView
+                            android:id="@+id/webinar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Webinar"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Upcoming Events Section -->
+            <TextView
+                android:id="@+id/upcoming_events_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Event List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/event_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar"/>
+                    <TextView
+                        android:id="@+id/ai_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Event\nSept 28, 2024"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/workshop_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar"/>
+                    <TextView
+                        android:id="@+id/web_workshop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Web Workshop\nJune 22, 2025"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Popular Activities Section -->
+            <TextView
+                android:id="@+id/popular_activities_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Activities"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Activities Cards -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Robotics Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/roboticsCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/robotics_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_robotics"/>
+                        <TextView
+                            android:id="@+id/robotics_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Robotics"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Debate Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/debateCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/debate_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_debate"/>
+                        <TextView
+                            android:id="@+id/debate_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Debate"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Music Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/musicCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/music_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_music"/>
+                        <TextView
+                            android:id="@+id/music_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Music"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Debugging Image Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="#1E1E1E"
+                        android:id="@+id/debuggingCV"
+                        android:layout_marginEnd="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/debugging_image"
+                            android:layout_width="match_parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_debugging"/>
+                        <TextView
+                            android:id="@+id/debugging_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Debugging"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="start|bottom|center"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

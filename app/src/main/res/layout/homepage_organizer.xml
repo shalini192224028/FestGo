@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E1E1E">
+
+    <!-- Menu and App Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="18dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FestGo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Main Image Banner -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#1E1E1E">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/explore_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_welcome"
+            app:shapeAppearanceOverlay="@style/Circular"/>
+
+        <TextView
+            android:id="@+id/explore_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join US!\nUpcoming Events"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="start|bottom|center"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Scrollable Buttons Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="80dp">
+
+            <!-- Create Event Button -->
+            <LinearLayout
+                android:id="@+id/create_eventCV"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/create_event_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_plus" />
+
+                <TextView
+                    android:id="@+id/create_event_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Create Event"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- My Event Button -->
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/my_event_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_eye" />
+
+                <TextView
+                    android:id="@+id/my_event_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="My Event"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Drop a Message Button -->
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/drop_message_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_message" />
+
+                <TextView
+                    android:id="@+id/drop_message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Drop a Message"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Logout Button -->
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/drop_logout_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_logoutw" />
+
+                <TextView
+                    android:id="@+id/drop_logout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Logout"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/organizer_navigation"
+    app:startDestination="@id/homePageAdminFragment">
+
+    <fragment
+        android:id="@+id/homePageAdminFragment"
+        android:name="com.example.festfinder.Admin.HomePageAdminFragment"
+        android:label="HomePageOrganizerFragment"
+        tools:layout="@layout/homepage_admin">
+        <action
+            android:id="@+id/action_homePageAdminFragment_to_myRequestFragment"
+            app:destination="@id/myRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminRequestFragment"
+        android:name="com.example.festfinder.Admin.AdminRequestFragment"
+        android:label="AdminRequestFragment"
+        tools:layout="@layout/admin_request"/>
+    <fragment
+        android:id="@+id/myRequestFragment"
+        android:name="com.example.festfinder.Admin.MyRequestFragment"
+        android:label="MyRequestFragment"
+        tools:layout="@layout/my_request">
+        <action
+            android:id="@+id/action_myRequestFragment_to_adminRequestFragment"
+            app:destination="@id/adminRequestFragment" />
+    </fragment>
+</navigation>

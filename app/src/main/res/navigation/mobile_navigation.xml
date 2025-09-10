@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.festfinder.User.ui.HomePageUserFragment"
+        android:name="com.simats.festgo_subscription.User.ui.HomePageUserFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/homepageuser" >
         <action
@@ -21,20 +21,20 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.festfinder.User.ui.gallery.GalleryFragment"
+        android:name="com.simats.festgo_subscription.User.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.festfinder.User.ui.slideshow.SlideshowFragment"
+        android:name="com.simats.festgo_subscription.User.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.festfinder.User.MyProfileFragment"
+        android:name="com.simats.festgo_subscription.User.MyProfileFragment"
         android:label="MyProfileFragment"
         tools:layout="@layout/my_profile">
         <action
@@ -43,24 +43,24 @@
     </fragment>
     <fragment
         android:id="@+id/nav_registered"
-        android:name="com.example.festfinder.User.MyRegistrationFragment"
+        android:name="com.simats.festgo_subscription.User.MyRegistrationFragment"
         android:label="MyRegistrationFragment"
         tools:layout="@layout/my_registration"/>
     <fragment
         android:id="@+id/nav_certificate"
-        android:name="com.example.festfinder.User.MyCertificateFragment"
+        android:name="com.simats.festgo_subscription.User.MyCertificateFragment"
         android:label="MyCertificateFragment"
         tools:layout="@layout/my_certificate" />
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.festfinder.User.UserTypeFragment"
+        android:name="com.simats.festgo_subscription.User.UserTypeFragment"
         android:label="UserTypeFragment"
-        tools:layout="@layout/user_type" />
+        tools:layout="@layout/login" />
 
     <fragment
         android:id="@+id/eventListFragment"
-        android:name="com.example.festfinder.User.EventFragment"
+        android:name="com.simats.festgo_subscription.User.EventFragment"
         android:label="EventListFragment"
         tools:layout="@layout/event_list">
         <action
@@ -73,7 +73,7 @@
 
     <fragment
         android:id="@+id/event_detail"
-        android:name="com.example.festfinder.User.EventDetailFragment"
+        android:name="com.simats.festgo_subscription.User.EventDetailFragment"
         android:label="EventDetailFragment"
         tools:layout="@layout/event_detail">
         <action
@@ -82,30 +82,37 @@
         <action
             android:id="@+id/action_event_detail_to_filterFragment3"
             app:destination="@id/filterFragment3" />
+        <action
+            android:id="@+id/action_event_detail_to_eventListFragment"
+            app:destination="@id/eventListFragment" />
     </fragment>
     <fragment
         android:id="@+id/eventRegistrationFragment"
-        android:name="com.example.festfinder.User.EventRegistrationFragment"
+        android:name="com.simats.festgo_subscription.User.EventRegistrationFragment"
         android:label="EventRegistrationFragment"
         tools:layout="@layout/event_registration">
         <action
             android:id="@+id/action_eventRegistrationFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_eventRegistrationFragment_to_event_detail"
+            app:destination="@id/event_detail" />
     </fragment>
     <fragment
         android:id="@+id/filterFragment3"
-        android:name="com.example.festfinder.User.FilterFragment"
+        android:name="com.simats.festgo_subscription.User.FilterFragment"
         android:label="FilterFragment"
         tools:layout="@layout/filter"/>
     <activity
         android:id="@+id/paymentFragment"
-        android:name="com.example.festfinder.User.PaymentFragment"
+        android:name="com.simats.festgo_subscription.User.PaymentFragment"
         android:label="FilterFragment"
         tools:layout="@layout/payment">
+
     </activity>
     <fragment
         android:id="@+id/successfullFragment"
-        android:name="com.example.festfinder.User.SuccessfullFragment"
+        android:name="com.simats.festgo_subscription.User.SuccessfullFragment"
         android:label="SuccessfullFragment"
         tools:layout="@layout/successfull">
         <action
@@ -114,12 +121,12 @@
     </fragment>
     <fragment
         android:id="@+id/workshopListFragment"
-        android:name="com.example.festfinder.User.WorkshopListFragment"
+        android:name="com.simats.festgo_subscription.User.WorkshopListFragment"
         android:label="WorkshopListFragment"
         tools:layout="@layout/workshop_list"/>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.example.festfinder.User.EditProfileFragment"
+        android:name="com.simats.festgo_subscription.User.EditProfileFragment"
         android:label="EditProfileFragment"
         tools:layout="@layout/edit_profile">
         <action

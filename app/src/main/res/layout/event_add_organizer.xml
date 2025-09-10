@@ -77,16 +77,18 @@
             android:textColor="#FFFFFF"
             android:layout_marginBottom="5dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Date"
+            android:hint="Select Date"
             android:textColor="#FFFFFF"
             android:textColorHint="#BDBDBD"
             android:background="#333333"
             android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:focusable="false" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -94,16 +96,18 @@
             android:textColor="#FFFFFF"
             android:layout_marginBottom="5dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Time"
+            android:hint="Select Time"
             android:textColor="#FFFFFF"
             android:textColorHint="#BDBDBD"
             android:background="#333333"
             android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:focusable="false" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -155,6 +159,7 @@
             android:textColorHint="#BDBDBD"
             android:background="#333333"
             android:padding="12dp"
+            android:autoText="false"
             android:layout_marginBottom="10dp"
             android:inputType="number" />
         <TextView
@@ -191,6 +196,7 @@
             android:textColorHint="#BDBDBD"
             android:background="#333333"
             android:padding="12dp"
+            android:autoText="false"
             android:layout_marginBottom="10dp"
             android:inputType="phone" />
         <LinearLayout

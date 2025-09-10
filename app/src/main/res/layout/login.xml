@@ -55,6 +55,7 @@
         android:layout_marginTop="60dp">
 
         <LinearLayout
+            android:id="@+id/loginll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="25dp"
@@ -68,6 +69,7 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:padding="12dp"
+                android:textColorHint="@color/black"
                 android:backgroundTint="#E0E0E0"
                 android:textColor="#000000"
                 android:layout_marginTop="12dp"
@@ -81,6 +83,7 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="12dp"
+                android:textColorHint="@color/black"
                 android:backgroundTint="#E0E0E0"
                 android:textColor="#000000"
                 android:layout_marginTop="12dp"
@@ -111,19 +114,19 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        android:layout_marginTop="8dp" />-->
 
-    <!-- Sign Up link -->
-    <TextView
-        android:id="@+id/skip_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Skip Login"
-        android:textColor="#888888"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/logincv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="skip"
-        android:layout_marginTop="8dp" />
+<!--    &lt;!&ndash; Sign Up link &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/skip_login"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Skip Login"-->
+<!--        android:textColor="#888888"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/logincv"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:onClick="skip"-->
+<!--        android:layout_marginTop="8dp" />-->
     <!-- Sign Up link -->
     <TextView
         android:id="@+id/sign_up"
@@ -132,7 +135,7 @@
         android:text="Don't have an account? Sign Up"
         android:textColor="#888888"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/skip_login"
+        app:layout_constraintTop_toBottomOf="@id/logincv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:onClick="signup"

@@ -7,16 +7,24 @@
 
     <fragment
         android:id="@+id/homePageOrganizerFragment"
-        android:name="com.example.festfinder.Organizer.HomePageOrganizerFragment"
+        android:name="com.simats.festgo_subscription.Organizer.HomePageOrganizerFragment"
         android:label="HomePageOrganizerFragment"
         tools:layout="@layout/homepage_organizer">
         <action
             android:id="@+id/action_homePageOrganizerFragment_to_eventAddOrganizerFragment"
             app:destination="@id/eventAddOrganizerFragment" />
+        <action
+            android:id="@+id/action_homePageOrganizerFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/eventAddOrganizerFragment"
-        android:name="com.example.festfinder.Organizer.EventAddOrganizerFragment"
+        android:name="com.simats.festgo_subscription.Organizer.EventAddOrganizerFragment"
         android:label="EventAddOrganizerFragment"
         tools:layout="@layout/event_add_organizer"/>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.simats.festgo_subscription.User.LoginActivity"
+        android:label="LoginActivity"
+        tools:layout="@layout/login"/>
 </navigation>

@@ -15,21 +15,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FestFinder"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".User.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.SplashActivity"
+            android:exported="false" />
         <activity
             android:name=".User.ForgetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".Admin.AdminDashBoardActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Organizer.OrganizerDashBoardActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".User.UserTypeActivity"
             android:exported="false" />
         <activity
-            android:name=".User.LoginActivity"
+            android:name=".User.ui.SubcriptionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

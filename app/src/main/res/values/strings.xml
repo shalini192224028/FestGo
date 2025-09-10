@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Fest Finder</string>
+    <string name="app_name">FestGo</string>
     <string name="title_activity_user_side_nav">User Side Navigation</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Fest Finder</string>
+    <string name="nav_header_title">FestGo</string>
     <string name="nav_header_subtitle">festfinder@android.com</string>
     <string name="nav_header_desc">Find events and workshops</string>
     <string name="action_settings">Settings</string>

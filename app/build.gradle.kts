@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.festfinder"
-    compileSdk = 34
+    namespace = "com.simats.festgo_subscription"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.festfinder"
+        applicationId = "com.simats.festgo_subscription"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
     buildFeatures {
         viewBinding = true
@@ -47,17 +47,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation("com.google.android.material:material:1.3.0-alpha03")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation ("com.google.code.gson:gson:2.8.9")
-    implementation ("com.google.code.gson:gson:2.8.9")
-    implementation("com.squareup.okhttp:okhttp-urlconnection:2.0.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:3.4.1")
-    implementation("com.razorpay:checkout:1.6.36")
+    implementation(libs.logging.interceptor)
+    implementation(libs.glide)
+    implementation(libs.material.v130alpha03)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
+    implementation (libs.gson)
+    implementation (libs.gson.v289)
+    implementation(libs.okhttp.urlconnection)
+    implementation(libs.logging.interceptor.v341)
+    implementation(libs.checkout)
+            implementation("com.android.billingclient:billing:6.1.0")
 
 
 }

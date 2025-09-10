@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".MainActivity">
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="FestGO"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Event Details Title -->
+    <TextView
+        android:id="@+id/event_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Request"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toBottomOf="@id/header_title" />
+
+    <!-- CardView for the status container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="#444444"
+        app:layout_constraintTop_toBottomOf="@id/event_details_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Inner ConstraintLayout for content -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Profile Photo -->
+            <ImageView
+                android:id="@+id/profilePhoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/img_profilem"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/organizerLayout"
+                android:contentDescription="Profile Photo"
+                android:scaleType="centerCrop" />
+
+            <!-- Organizer -->
+            <LinearLayout
+                android:id="@+id/organizerLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profilePhoto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/organizer_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Organizer:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/organizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Shaam"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Event Name -->
+            <LinearLayout
+                android:id="@+id/eventNameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/organizerLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/eventNametitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event Name:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/eventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Coding Bootcamp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Description -->
+            <LinearLayout
+                android:id="@+id/descriptionLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/eventNameLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/descriptiontime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Learn the Basics of Programming in this intensive"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Date -->
+            <LinearLayout
+                android:id="@+id/dateLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/descriptionLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/datename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" October 14, 2024"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Time -->
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/dateLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/timename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 9 am - 5 pm"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Location -->
+            <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/timeLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/locationname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Lab 101, Tech Block, IIT Madras, Guindy Chennai - 601242"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Event Type -->
+            <LinearLayout
+                android:id="@+id/eventTypeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/locationLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/eventTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event Type:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/eventType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Event"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Registration Fee -->
+            <LinearLayout
+                android:id="@+id/registrationFeeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/eventTypeLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/registrationFeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration Fee:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/registrationFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 50"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+
+            <!-- LinearLayout for Email -->
+            <LinearLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/registrationFeeLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/emailName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" shaam@gmail.com"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- LinearLayout for Phone -->
+            <LinearLayout
+                android:id="@+id/phoneLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/emailLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/phoneName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 9812676912"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- LinearLayout for View Poster and Permission Letter Buttons -->
+            <LinearLayout
+                android:id="@+id/proof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneLayout">
+
+                <!-- View Poster Button -->
+                <Button
+                    android:id="@+id/viewPosterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#666666"
+                    android:text="Poster"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <!-- View Permission Letter Button -->
+                <Button
+                    android:id="@+id/viewPermissionLetterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#666666"
+                    android:text="Permission Letter"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/approvereject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/proof"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!-- Approval Status Button -->
+                <Button
+                    android:id="@+id/approvesstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#14AE5C"
+                    android:text="APPROVED"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <!-- Reject Status Button -->
+                <Button
+                    android:id="@+id/rejectstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EC221F"
+                    android:text="REJECT"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

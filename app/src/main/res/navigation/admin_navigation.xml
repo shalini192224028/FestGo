@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homePageAdminFragment"
-        android:name="com.example.festfinder.Admin.HomePageAdminFragment"
+        android:name="com.simats.festgo_subscription.Admin.HomePageAdminFragment"
         android:label="HomePageOrganizerFragment"
         tools:layout="@layout/homepage_admin">
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/adminRequestFragment"
-        android:name="com.example.festfinder.Admin.AdminRequestFragment"
+        android:name="com.simats.festgo_subscription.Admin.AdminRequestFragment"
         android:label="AdminRequestFragment"
         tools:layout="@layout/admin_request"/>
     <fragment
         android:id="@+id/myRequestFragment"
-        android:name="com.example.festfinder.Admin.MyRequestFragment"
+        android:name="com.simats.festgo_subscription.Admin.MyRequestFragment"
         android:label="MyRequestFragment"
         tools:layout="@layout/my_request">
         <action

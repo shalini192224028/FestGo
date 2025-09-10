@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Fest Finder"
+rootProject.name = "FestGo"
 include(":app")
  

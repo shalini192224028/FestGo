@@ -53,7 +53,7 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/profileImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@id/textName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/textRegNo"
@@ -81,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@id/textCollege"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/textEmail"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@id/textRegNo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="15dp" />
 
     <LinearLayout
         android:id="@+id/linearLayoutEdit"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@id/textEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="15dp">
 
         <!-- Edit Icon -->
         <ImageView
